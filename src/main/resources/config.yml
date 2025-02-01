@@ -1,0 +1,74 @@
+# XcZzz | xczdev.ru
+
+# Конфигурация сообщений
+lang:
+
+  # Конфигурация меню модераторов
+  menu:
+    menuTitle: "&bTM &7| &aВаш рейтинг: %rating%"
+    ticketExample:
+      acceptYes: "&bНажмите что бы принять тикет"
+      acceptNo: "&fМодератор &b%moderator% &fпринял тикет"
+      title: "&b%player% &7(#%id%)"
+      lore:
+        - "&bВопрос: &f%question%"
+        - ""
+        - "%acceptable%"
+        - "&7%publishDate% (%expiryDate%)"
+
+  # Чат тикета
+  moderatorMessage: "&8[&5Модератор&8] &7%moderator%&8: &f%message%"
+  playerMessage: "&8[&bИгрок&8] &7%player%&8: &f%message%"
+
+  # Взаимодействие с тикетами
+  moderatorHasAcceptTicket: "&aМодератор %moderator% принял ваш тикет &7(#%id%)"
+  moderatorHasAcceptTicketForModerator:
+    - "&aВы приняли тикет &b#%id%"
+    - "&fДля телепортации к игроку пропишите &b/tp %player%"
+    - "&fДля быстрого ответа пропишите &b/ticketreply [Сообщение]"
+  moderatorInfo:
+    - "&8[&b&lTicketsManager&8] &fИнформация о модераторе &b%moderator%"
+    - "&8> &fРейтинг&8: &b%rating%"
+    - "&8> &fКол-во решенных тикетов&8: &b%tickets%"
+  moderatorInfoPeriod:
+    - "&8[&b&lTicketsManager&8] &fИнформация о модераторе &b%moderator% &fза %period%"
+    - "&8> &fРейтинг&8: &b%rating%"
+    - "&8> &fКол-во решенных тикетов&8: &b%tickets%"
+  periodDay: "день"
+  periodWeek: "неделю"
+  periodMonth: "месяц"
+  ticketWasClosedModeratorForModerator: "&fВы закрыли тикет &b#%id%"
+  ticketWasClosedModeratorForPlayer: "&8[&5Модератор&8] &7%moderator% &fзакрыл ваш тикет &7(#%id%)"
+  ticketWasClosedPlayerForModerator: "&8[&bИгрок&8] &7%player% &fзакрыл тикет &b#%id%"
+  ticketWasClosedPlayerForPlayer: "&fВы закрыли тикет &b#%id%"
+  ticketWasClosedPlayerForModeratorWithRate: "&8[&bИгрок&8] &7%player% закрыл тикет &b#%id% &7(Оценка %rate%)"
+  ticketWasClosedPlayerForPlayerWithRate: "&fВы закрыли тикет &b#%id% &7(Оценка %rate%)"
+  ticketWasCreated: "&aТикет успешно создан! Скоро модерация ответит на ваш вопрос."
+  ticketWasCreateForModerator: "Поступил вопрос от игрока &b%player%&f. Пропишите /ticket что бы увидеть вопрос"
+
+  # Возможные ошибки
+  ticketErrorCreated: "&cВы уже создали тикет. Если вы хотите закрыть тикет используйте команду /ticketclose"
+  ticketAcceptError: "&cПроизошла ошибка при принятии тикета"
+  ticketCreateError: "&cПроизошла ошибка при создании тикета"
+  ticketNotAccepted: "&cВы не приняли тикет"
+  ticketNotCreated: "&cВы не создавали тикет"
+  ticketHelp: "Введите ваш вопрос &7(/ticket Вопрос)"
+  ticketRateError: "&cОценка должна варьироваться от 1 до 5 и быть числом!"
+  NoOneModeratorsAccepted: "&cНи один модератор не принял ваш тикет."
+  ModeratorHasAcceptTicket: "&cВы уже взяли тикет #%id%. Если произошла ошибка обратитесь к администратору."
+  userNotOnline: "&cПользователь не в сети, попробуйте позже или закройте тикет &7(/ticketclose)"
+  moderatorInfoError: "&cИспользуйте /ticket info [Модератор]"
+  moderatorInfoErrorNoPerm: "&cИгрок не является модератором"
+  moderatorOffline: "&cИгрок не в сети!"
+  infoPeriodError: "&cНеверный период, используйте day/week/month"
+
+  # Серверные сообщения
+  consoleError: "Эта команда только для игроков!"
+  reloadSuccess: "&aПлагин успешно перезагружен!"
+
+
+# Настройки
+settings:
+  ticketExpire: 1 # Дни, через сколько тикет будет автоматически удаляться
+  moderatorPermission: ticketsmanager.moderator # Право модерации, позволяет отвечать на вопросы игроков
+  adminPermission: ticketsmanager.admin # Право администрации, позволяет просматривать информацию о модераторе

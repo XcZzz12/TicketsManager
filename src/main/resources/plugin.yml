@@ -1,0 +1,14 @@
+name: TicketsManager
+version: '1.0'
+main: ru.xczdev.ticketsManager.TicketsManager
+api-version: '1.21'
+authors: [ Atlas ]
+commands:
+  ticket:
+    usage: /ticket
+  ticketreply:
+    usage: /ticketreply
+    aliases: [ticketr]
+  ticketclose:
+    usage: /ticketclose
+    aliases: [ticketc]
